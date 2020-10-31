@@ -29,22 +29,7 @@
 
 }
 
-/*.lpp{*/
-/*    overflow-y: auto;*/
-/*    width : 40%;*/
-/*    height:auto;*/
-/*    max-height:90%;*/
-/*    margin:auto;*/
-/*    align-content: center;*/
-/*    align-items: center;*/
-/*    text-align: center;*/
-/*    display: inline-block;*/
-/*    border-radius: 25px;*/
-/*    position: absolute;*/
-/*    left: 50%;*/
-/*    top: 45%;*/
-/*    transform: translate(-50%, -50%);*/
-/*}*/
+
 
 .ctr{
     /*position: center;*/
@@ -129,8 +114,8 @@ th{
     margin-left: 20%;
     margin-right: 20%;
 }
-.bg:hover{
-    background-color: white;
-    color: #001C36;
-    border: 1px solid #001C36 ;
+.bgq:hover{
+    background-color: #001C36;
+    opacity: 85%;
+    color: white;
 }

@@ -22,7 +22,7 @@
 <p th:text="'Tanggal Lahir    :' + ${#dates.format(pilot.tanggalLahir, 'dd/MM/yyyy')}"></p>
 <p th:text="'Sekolah          :' + ${sekolah}"></p>
 <p th:text="'Maskapai         :' + ${maskapai}"></p>
-    <a th:href="@{/pilot/ubah/} + ${pilot.nip}" class="btn bg">Ubah</a>
+    <a th:href="@{/pilot/ubah/} + ${pilot.nip}" class="btn bg bgq">Ubah</a>
     <a class="btn btn-danger">Hapus</a>
         <br><br>
     </div>
@@ -54,7 +54,7 @@
             <td th:text="${penerbangan.kota_tujuan}"></td>
 
             <td>
-                <a th:href="@{/penerbangan/detail/} + ${penerbangan.id}" class="btn btn-block btn btn-outline-dark bg "
+                <a th:href="@{/penerbangan/detail/} + ${penerbangan.id}" class="btn bg bgq "
                 >Lihat</a>
 
             </td>

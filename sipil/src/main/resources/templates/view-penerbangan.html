@@ -20,7 +20,7 @@
         <p th:text="'Kota Tujuan      : ' + ${penerbangan.kota_tujuan}"></p>
         <div class="p-2 d-inline-flex">
 
-        <div class="p-1"><a th:href="@{/penerbangan/ubah/} + ${penerbangan.id}" class="btn bg"> Ubah </a></div>
+        <div class="p-1"><a th:href="@{/penerbangan/ubah/} + ${penerbangan.id}" class="btn bg bgq"> Ubah </a></div>
             <div class="p-1"><a> <form th:action="@{/penerbangan/hapus}" th:object="${penerbangan}"  method="POST">
             <input type="hidden" name="idPenerbangan" th:value="${penerbangan.id}"  class="btn btn-danger"/>
             <input type="submit" name="btnInsert" class="btn btn-danger" value="Hapus" />
