@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Form update pilot</title>
+    <object th:include="fragments/fragment :: css" th:remove="tag"></object>
+    <object th:include="fragments/fragment :: js" th:remove="tag"></object>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</head>
+<body>
+<div>
+    <nav th:replace="fragments/fragment"></nav>
+    <div class=" justify-content-center lpp">
+        <form th:action="@{/pilot/ubah}" th:object="${pilot}" method="POST" class="mar shadow flex-grow-1 marr form-group" style="text-align: left;">
+            <div class="bg dp font-weight-bold" style="font-size: 15px; padding-bottom: 1px;"><p>Ubah Pilot</p></div>
+            <div class="fr">
+                <input type="hidden" th:field="*{id}"/>
+                Nama :<br>
+                <input type="text" name="nama" class="form-control mb-1"/>
+                NIK:<br>
+                <input type="text" name="nik" class="form-control mb-1"/>
+                Tempat Lahir:<br>
+                <input type="text" name="tempatLahir" class="form-control mb-1"/>
+                Tanggal Lahir:<br>
+                <input type="date" name="tanggalLahir" class="form-control mb-1"/>
+                Jenis Kelamin:<br>
+                <select name="jenisKelamin" class="form-control mb-1" />
+                <option value="1">Laki-laki</option>
+                <option value="2">Perempuan</option>
+                </select>
+                Sekolah:<br>
+                <select name="akademiModel.id"  class="form-control mb-1" >
+                    <option th:each="akademi: ${listAkademi}" th:value="${akademi.id}" th:text="${akademi.nama}"></option>
+                </select>
+                Maskapai:<br>
+                <select   name="maskapaiModel.id" class="form-control mb-1">
+                    <option></option>
+                    <option th:each="maskapai: ${listMaskapai}" th:value="${maskapai.id}" th:text="${maskapai.nama}"></option>
+                </select>
+                <!--        <input type="hidden" th:value="${pilotService.getNip()}">-->
+<!--                <a  th:href="@{/pilot/} + ${pilot.nip}" class="button btn-danger rad" value="Submit">Batal</a>-->
+                <a th:href="@{/pilot/} + ${pilot.nip}" class="btn batal  btn-outline-dark rad" style="width: 70px">Batal </a>
+
+                <button type="submit" name="save" class="btn button rad bg" value="Submit" style="width: 80px;">Simpan</button>
+            </div>
+        </form></div>
+</div>
+</body>
+</html>

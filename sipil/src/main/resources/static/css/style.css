@@ -1,0 +1,136 @@
+.bg{
+    background-color: #001C36;
+    color: white;
+}
+
+.wh{
+    color: white;
+}
+.lp{
+    overflow-y: auto;
+    width : 60%;
+    height:auto;
+    max-height:90%;
+    margin:auto;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-right: 10%;
+    padding-left: 10%;
+    /*font-size: large;*/
+
+}
+
+/*.lpp{*/
+/*    overflow-y: auto;*/
+/*    width : 40%;*/
+/*    height:auto;*/
+/*    max-height:90%;*/
+/*    margin:auto;*/
+/*    align-content: center;*/
+/*    align-items: center;*/
+/*    text-align: center;*/
+/*    display: inline-block;*/
+/*    border-radius: 25px;*/
+/*    position: absolute;*/
+/*    left: 50%;*/
+/*    top: 45%;*/
+/*    transform: translate(-50%, -50%);*/
+/*}*/
+
+.ctr{
+    /*position: center;*/
+    /*position: absolute;*/
+    /*transform: translate(-50%, -50%);*/
+
+
+}
+
+#outer
+{
+    width:100%;
+    text-align: center;
+    margin-top: 25%;
+}
+.inner
+{
+    display: inline-block;
+    margin:1%;
+}
+.rad{
+    border-radius: 12px;
+    width: 120px;
+}
+.tambah{
+    border-radius: 5px;
+    width: 150px;
+    margin-bottom: 3%;
+}
+.nav-item:hover{
+    opacity: 80%;
+}
+.rad:hover{
+    background-color: white;
+    color: #001C36;
+    border: 2px solid #001C36;
+}
+.mar{
+    margin:3%;
+}
+.marr{
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.dp{
+    padding-bottom: 0px;
+    padding-top: 5px;
+    text-align: center;
+}
+.fr{
+    padding: 12px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+}
+.max{
+    max-width: 35%;
+    align-content: center;
+}
+.marg{
+    margin: 10%;
+}
+.btn{
+    text-align: center;
+}
+td{
+    text-align: center;
+}
+th{
+    text-align: center;
+}
+.batal{
+    background-color: white;
+    color: #001C36;
+    border: 2px solid #001C36;
+}
+.batal:hover{
+    background-color: #001C36;
+    color: white;
+}
+.tacil{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.bg:hover{
+    background-color: white;
+    color: #001C36;
+    border: 1px solid #001C36 ;
+}

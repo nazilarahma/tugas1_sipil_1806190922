@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thyemleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bonus</title>
+    <object th:include="fragments/fragment :: css" th:remove="tag"></object>
+    <object th:include="fragments/fragment :: js" th:remove="tag"></object>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<nav th:replace="fragments/fragment"></nav>
+<div class="mar">
+
+    <table class="table shadow p-3 mb-5">
+        <thead>
+        <tr ><div class="align-content-center bg dp font-weight-bold" style="padding: 8px">Daftar  Pilot</div></tr>
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>NIP</th>
+            <th>Tanggal Lahir</th>
+            <th>Jenis Kelamin</th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="pilot, iterationStatus : ${listPilot}">
+            <td th:text="${iterationStatus.count}"></td>
+            <td th:text="${pilot.nama}"></td>
+            <td th:text="${pilot.nip}"></td>
+            <td th:text="${#dates.format(pilot.tanggalLahir, 'dd/MM/yyyy')}"></td>
+            <td th:if="${pilot.jenisKelamin==1}">Laki-laki</td>
+            <td th:if="${pilot.jenisKelamin==2}">Perempuan</td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
